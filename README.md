@@ -1,5 +1,5 @@
 # ETL-Project: Extract, Tranform, Load - A Tale of a Vineyard
-This repository explores the concept of ETL's - Extract, Tranform, Load - by creating a database accessable through (SQL/Postgres?) to assess which locations in (Country/Area) are ideal to establish a vineyard. 
+This repository explores the concept of ETL's - Extract, Tranform, Load - by creating a database accessable through (SQL/Postgres?) to assess which locations in Western Australia are ideal to establish a vineyard. 
 
 ## Team Members:
 * Michael Bett
@@ -35,8 +35,11 @@ The database created will give an insight into what locations are ideal for a pa
 ... why did we transform the data in this way
 
 ### Steps:
-* 
-* 
+#### Step 1 - Transform WineData.csv
+* Reading in WineData.csv and display data
+* Create new dataframe with the following columns: country, price, province, region_1, title, winery, variety
+* Rename column headers
+* Filter dataframe for 'Western Australia'
 * 
 
 ### Challenges
