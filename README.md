@@ -18,14 +18,18 @@ The database created will give an insight into what locations are ideal for a pa
 ... Why did we choose these data Sources
 
 ### Data Sources:
-1. Department Primary Industries and Regional Development WA: https://www.agric.wa.gov.au/soil-api-10
-2. https://www.kaggle.com: WineData.csv 
-3. 
+1. https://www.kaggle.com: WineData.csv 
+2. Google API to determine lat and long for winery locations
+3. Department Primary Industries and Regional Development WA: https://www.agric.wa.gov.au/soil-api-10 
+4. Bureau of Meteorology: http://www.bom.gov.au/
+
 
 ### Steps:
-* 
-* 
-* 
+#### Step 1 - Extract WineData.csv
+* Reading in WineData.csv and display data
+
+#### Step 2 - Extract winery latitudes and longitudes utilising Google API
+* Read in Google API and build target url
 
 ### Challenges
 * 
@@ -36,11 +40,20 @@ The database created will give an insight into what locations are ideal for a pa
 
 ### Steps:
 #### Step 1 - Transform WineData.csv
-* Reading in WineData.csv and display data
-* Create new dataframe with the following columns: country, price, province, region_1, title, winery, variety
+* Create new dataframe with the following columns: country, price, points, province, region_1, title, winery, variety
 * Rename column headers
 * Filter dataframe for 'Western Australia'
+* Inspect dataframe for unique values
+* Reset index for each of the wineries
+* Drop column 'index'
+* Find unique values for wineries
+* Create a list of unique wineries to use for Google API to find location of wineries
+
+#### Step 2 - Find winery latitudes and longitudes utilising Google API
 * 
+* Create a loop to extract latitude and longitude for each unique winerey
+
+#### Step 3 - Find winery latitudes and longitudes utilising Google API
 
 ### Challenges
 * 
