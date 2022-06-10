@@ -38,11 +38,17 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 #### Step 4 - Extract weather data
 * Reading in weather.csv and display data
 
-#### Step 5 - Extract wine production data
-* Reading in WineProductionSummary.csv and display
+#### Step 5 - Extract Wine Sales by Geographical Location
+* Reading in GeoWineSales.csv and display
 
-#### Step 6 - Extract wine sales data
-* Reading in WineSales.csv
+#### Step 6 - Extract Wine Volume by Region
+* Reading in GIVolumeProduction.csv and display
+
+#### Step 7 - Extract Wine Sales by Grape Variety
+* Reading in SalesByVariety.csv and display
+
+#### Step 8 - Extract Grape Variety Production
+* Reading in WineProductionSummary.csv and display
 
 ### Challenges
 * 
@@ -75,13 +81,21 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * 
 * 
 
-#### Step 5 - Transform WineProductionSummary.csv
-* 
-* 
+#### Step 5 - Transform GeoWineSales.csv
+* Rename column heads
 
-#### Step 6 - Transform WineSalesSummary.csv
-* 
-* 
+#### Step 6 - Transform GIVolumeProduction.csv
+* Drop 'Volume % change on previous period' and 'Average value % change on previous period' columns
+* Rename columns
+
+#### Step 7 - Transform SalesByVariety.csv
+* Rename column
+* Drop all rows with NaN value
+
+#### Step 8 - Transform WineProductionSummary.csv
+* Replace NaN with 0
+* Drop '% change in average value' column
+* Rename 'Variety' to 'Grape Variety', add 'Export Sales' to each year
 
 
 ### Challenges
