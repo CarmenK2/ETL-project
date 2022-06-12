@@ -51,12 +51,22 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * Reading in WineProductionSummary.csv and display
 
 ### Challenges
-* 
-* 
+* Getting access to API keys
+* Developing url's to access the API information
+* reading in csv files that produced UnicodeDecodeError
 
 
 ## Transform
-... why did we transform the data in this way
+In step one the data from WineData.csv was transformed in the step outlines below to allow for quick and easy understanding of the data for further analysis and visualisation as well as being able to extract latitudes and longitudes for each winery by winery name.
+
+The removing any '&" signs in step two needed to be performed to allow for optimisitaion of extraction of latitudes and longitudes. Looping through each of the wineries automated the process of extracting latitudes and longitudes from the Google API.
+
+In step three the transformation of the soil data...
+
+As outlined in step four the data transformation ...
+
+Step five to eight were applied to allow for quick and easy understanding of the data. To simplify merging these data frames with the rest of the dataframe which will allow for deeper analysis and visualisation.
+
 
 ### Steps:
 #### Step 1 - Transform WineData.csv
@@ -78,6 +88,7 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * 
 
 #### Step 4 - Transform WaetherData.csv
+* 
 * 
 * 
 
