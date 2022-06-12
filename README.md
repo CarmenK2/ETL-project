@@ -36,7 +36,9 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * Read in Soil API and build target url
 
 #### Step 4 - Extract weather data
-* Reading in weather.csv and display data
+* Reading in winery data with lats and longs and display data
+* Loop through and read in consolidated master file of rainfall csv's
+* Import os to interact with the underlying operating system/ returns the absolute path of the working directory
 
 #### Step 5 - Extract Wine Sales by Geographical Location
 * Reading in GeoWineSales.csv and display
@@ -77,6 +79,7 @@ Step five to eight were applied to allow for quick and easy understanding of the
 * Reset index for each of the wineries
 * Drop column 'index'
 * Find unique values for wineries
+* Drop Hope Estate as it is a winery in NSW
 * Create a dataframe of unique wineries to use for Google API to find location of wineries
 
 #### Step 2 - Find winery latitudes and longitudes utilising Google API
@@ -84,13 +87,30 @@ Step five to eight were applied to allow for quick and easy understanding of the
 * Create a loop with error exception to extract latitude and longitude for each unique winerey
 
 #### Step 3 - Find soil composition data utilising Agric Soil API
-* 
-* 
 
-#### Step 4 - Transform WaetherData.csv
-* 
-* 
-* 
+
+
+#### Step 4 - Transform WeatherData.csv
+* Round down those Lat and lng statistic to only 2 digits to look up weather stations from BOM
+* Fill all the NA value with Zero for rainfall csv
+* Correct the sumation for the Annual column after filling all NA value with Zero
+* Groupby the Station Number for the average rainfall since year 2000
+* Looping the Resources_weather folder for each file name under rainfall.csv and join them together into a master file
+* Fill up all the NA value with Zero value and correct the summation of "Annual" column 
+* Selecting only year older than 2000, and column of station number and annual
+* Drop off weather station 12280 as data are faulty
+* Check how many station left
+* Name change for "Annual Column" to "Annual Average Rainfall (mm)"
+* Groupby the station number and calculate the mean for year older than 2000
+* Round to 2 decimal place for better presentation
+* Looping the Resources_weather folder for each file name under solar.csv and join them together into a master file
+* Fill up all the NA value with Zero value and correct the summation of "Annual" column 
+* Selecting only year older than 2000, and column of station number and annual
+* Drop off weather station 12280 as data are faulty
+* Check how many station left
+* Name change for "Annual Column" to "Annual Average Solar Exposure (MJ m-2)"
+* Groupby the station number and calculate the mean for years older than 2000
+* Round to 2 decimal place for better presentation
 
 #### Step 5 - Transform GeoWineSales.csv
 * Rename column heads
@@ -110,7 +130,7 @@ Step five to eight were applied to allow for quick and easy understanding of the
 
 
 ### Challenges
-* 
+* While transforming latitudes and longitudes for WeatherData it was found that index 6 is a winery in New South Wales which needed to removed 
 * 
 
 
