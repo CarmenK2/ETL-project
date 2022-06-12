@@ -1,5 +1,5 @@
 # ETL-Project: Extract, Tranform, Load - A Tale of a Vineyard
-This repository explores the concept of ETL's - Extract, Tranform, Load - by creating a database accessabled through SQL/Postgres to assess which locations in Western Australia are ideal to establish a vineyard. 
+This repository explores the concept of ETL's - Extract, Tranform, Load - by creating a database accessabled through PostgresSQL to assess which locations in Western Australia are ideal to establish a vineyard. 
 
 ## Team Members:
 * Michael Bett
@@ -90,7 +90,7 @@ Step five to eight were applied to allow for quick and easy understanding of the
 
 
 
-#### Step 4 - Transform WeatherData.csv
+#### Step 4 - Transform Weather data
 * Round down those Lat and lng statistic to only 2 digits to look up weather stations from BOM
 * Fill all the NA value with Zero for rainfall csv
 * Correct the sumation for the Annual column after filling all NA value with Zero
@@ -136,18 +136,33 @@ Step five to eight were applied to allow for quick and easy understanding of the
 
 
 ## Load
-... why did we choose this method 
+As the data is very structured and relational PostgresSQL was usedd to load the data into a database. This allows for easy access by multiple users. 
 
 ### Steps:
-* 
-* 
-* 
+#### Step 1
+* Created schemata with all tables and tables headers in https://quickdatabasediagrams.com
+* Exported schemata to PostgresSQL
+
+#### Step 2
+* Imported schemata greated in quickdatadiagrams into PostgresSQL
+* Ran the code
+
+#### Step 3
+* In winery_data.ipnyp, Weather.ipnyp, soil.ipnyp, vineyard.ipynb created a connection to local database for each final dataframe
+* Checked for table names
+* Used pandas to load csv converted dataframes into database
+* Used pandas to load API converted dataframes into database
+* Confirmed data has been added querying data table names
+
+#### Step 4
+* Confirmed in PostgresSQL that data was loaded
 
 ### Challenges
 * 
 * 
 
-** Insert schemata
+### Schemata
+![diagram_relationship](Resources_weather/diagramrelationship.png)
 
 ## Summary
 This data base can be used to compare performance of Western Australian Wine regions over time and find the ideal location. The data can be used for further in depth analysis and visualisation to highlight statistical summaries and pattern recognition. The database is relational because the information is very structured. In addition anyone is able to access the database by using SQL.
