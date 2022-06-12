@@ -131,7 +131,8 @@ Step five to eight were applied to allow for quick and easy understanding of the
 
 ### Challenges
 * While transforming latitudes and longitudes for WeatherData it was found that index 6 is a winery in New South Wales which needed to removed 
-* 
+* Working out how to structure the code to access latitudes and longitudes of the wineries
+* Inconsitency of weather data, not all years have sufficient data
 
 
 ## Load
