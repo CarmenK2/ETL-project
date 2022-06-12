@@ -1,0 +1,79 @@
+Winery_Listing
+-
+Winery_Name varchar PK FK >- Soil_data.Winery_Name
+Region varchar FK >- Winery_Tasting_Price_data.Region
+Wine_title varchar
+Grape_variety varchar
+
+
+Winery_Location
+-
+Winery_Name varchar PK FK >- Winery_Tasting_Price_data.Winery_Name
+Lat float
+Lng float
+Weather_station_number int
+
+
+Weather_data
+-
+Weather_station_number int PK FK >- Winery_Location.Weather_station_number
+Average_yearly_rainfall float
+Average_yearly_solar_exposure float
+
+
+Soil_data
+-
+Winery_Name varchar PK
+Lat float
+Lng float
+Soil_qualifier_Name varchar
+Soil_qualifier_Grp varchar
+Soil_landUnit_Name varchar
+WAsoilGroupName varchar
+WAsoilGroupCode int
+SoilQualifiercode varchar
+LandUnitCode int
+LandUnitName varchar
+
+Winery_Export_Sales_by_Geolocation
+-
+Region varchar PK FK >- Wine_Grape_varierty_Production.Region
+Year int
+
+
+Wine_volume_by_region
+-
+Region varchar PK FK >- Wine_Grape_varierty_Production.Region
+Year int
+Production_volume float
+Average_Sales_value_per_Liter float
+
+Wine_Grape_variety_Sales
+-
+Grape_Variety varchar PK FK >- Wine_Grape_varierty_Production.Grape_Variety
+Export_Sales_by_year varchar
+
+
+Wine_Grape_varierty_Production
+-
+Region varchar PK
+Year int
+Wine_Color varchar
+Grape_Variety varchar FK >- Winery_Tasting_Price_data.Grape_variety
+Tonnes_Purchased float
+Total_Value_purchased float
+Average_purchase_value_per_tonne float
+Winery_grown_fruit_per_tonne float
+Winery_grown_share_of_crush float
+Total_crushed float
+Total_value_all_grapes float
+
+
+Winery_Tasting_Price_data
+-
+Winery_Name varchar PK
+Region varchar
+Wine_title varchar
+Grape_variety varchar
+Tasting_score int
+Price int
