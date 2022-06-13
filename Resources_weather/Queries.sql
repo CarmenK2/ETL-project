@@ -35,14 +35,8 @@ CREATE TABLE "Soil_data" (
     "Winery_Name" varchar   NOT NULL,
     "Lat" float   NOT NULL,
     "Lng" float   NOT NULL,
-    "Soil_qualifier_Name" varchar   NOT NULL,
-    "Soil_qualifier_Grp" varchar   NOT NULL,
-    "Soil_landUnit_Name" varchar   NOT NULL,
-    "WAsoilGroupName" varchar   NOT NULL,
-    "WAsoilGroupCode" int   NOT NULL,
-    "SoilQualifiercode" varchar   NOT NULL,
-    "LandUnitCode" int   NOT NULL,
-    "LandUnitName" varchar   NOT NULL,
+    "SubSoil_Condition" varchar   NOT NULL,
+    "Soil_type" varchar   NOT NULL,
     CONSTRAINT "pk_Soil_data" PRIMARY KEY (
         "Winery_Name"
      )
