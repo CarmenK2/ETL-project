@@ -89,7 +89,7 @@ CREATE TABLE "Winery_Tasting_Price_data" (
 );
 
 ALTER TABLE "Winery_Location" ADD CONSTRAINT "fk_Winery_Location_Winery" FOREIGN KEY("Winery")
-REFERENCES "Winery_Tasting_Price_data" ("Winery");
+REFERENCES "Soil_data" ("Winery");
 
 ALTER TABLE "Weather_data" ADD CONSTRAINT "fk_Weather_data_Closest_weather_station" FOREIGN KEY("Closest_weather_station")
 REFERENCES "Winery_Location" ("Closest_weather_station");
@@ -105,4 +105,7 @@ REFERENCES "Wine_Grape_varierty_Production" ("Grape_Variety");
 
 ALTER TABLE "Wine_Grape_varierty_Production" ADD CONSTRAINT "fk_Wine_Grape_varierty_Production_Grape_Variety" FOREIGN KEY("Grape_Variety")
 REFERENCES "Winery_Tasting_Price_data" ("Grape_variety");
+
+ALTER TABLE "Winery_Tasting_Price_data" ADD CONSTRAINT "fk_Winery_Tasting_Price_data_Winery" FOREIGN KEY("Winery")
+REFERENCES "Winery_Location" ("Winery");
 
