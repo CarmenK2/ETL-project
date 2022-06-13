@@ -33,10 +33,11 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * Read in Google API and build target url
 
 #### Step 3 - Extract soil data
+* Read in Location_DF.csv
 * Read in Soil API and build target url
 
 #### Step 4 - Extract weather data
-* Reading in winery data with lats and longs and display data
+* Read in winery data with lats and longs and display data
 * Loop through and read in consolidated master file of rainfall csv's
 * Import os to interact with the underlying operating system/ returns the absolute path of the working directory
 
@@ -87,8 +88,8 @@ Step five to eight were applied to allow for quick and easy understanding of the
 * Create a loop with error exception to extract latitude and longitude for each unique winerey
 
 #### Step 3 - Find soil composition data utilising Agric Soil API
-
-
+* Created soild dataframe
+* Looped through soil API to retrieve soil data based on latitude and longitude of wineries
 
 #### Step 4 - Transform Weather data
 * Round down those Lat and lng statistic to only 2 digits to look up weather stations from BOM
