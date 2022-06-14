@@ -25,6 +25,13 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 4. Bureau of Meteorology: https://www.bom.gov.au/
 5. Wine Australia: https://wineaustralia.com
 
+## How to use this database
+1. Run vinyard.ipynb to get all Western Australian Wineries and upload to Postgres
+2. Run Weather.ipynb to get all weather data and upload to Postgres
+3. Run soils.ipynb to get all soil data and upload to Postgres
+4. Run winery_data1.ipynb to get all production and sales data and upload to Postgres
+
+## Extract
 ### Steps:
 #### Step 1 - Extract WineData.csv
 * Reading in WineData.csv and display data
@@ -159,11 +166,10 @@ As the data is very structured and relational PostgresSQL was usedd to load the 
 * Confirmed in PostgresSQL that data was loaded
 
 ### Challenges
-* 
-* 
+* Spelling of table headers needed to match
 
 ### Schemata
-![diagram_relationship](Resources_weather/diagramrelationship.png)
+![diagram_relationship](Final_diagram.png)
 
 ## Summary
 This data base can be used to compare performance of Western Australian Wine regions over time and find the ideal location. The data can be used for further in depth analysis and visualisation to highlight statistical summaries and pattern recognition. The database is relational because the information is very structured. In addition anyone is able to access the database by using SQL.
