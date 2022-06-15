@@ -1,5 +1,5 @@
-# ETL-Project: Extract, Tranform, Load - A Tale of a Vineyard
-This repository explores the concept of ETL's - Extract, Tranform, Load - by creating a database accessabled through PostgresSQL to assess which locations in Western Australia are ideal to establish a vineyard. 
+# ETL-Project: Extract, Transform, Load - A Tale of a Vineyard
+This repository explores the concept of ETL's - Extract, Transform, Load - by creating a database accessable through PostgresSQL to assess which locations in Western Australia are ideal to establish a vineyard. 
 
 ## Team Members:
 * Michael Bett
@@ -8,7 +8,7 @@ This repository explores the concept of ETL's - Extract, Tranform, Load - by cre
 * Aline Hornoff
 
 ## The Project
-A good glass of wine to wind down after a day hectic and stress or celebrate a great achievment is a special treat. But where is the ideal location to turn a simple fruit like a grape into a glass of joy to celebrate a special occasion.
+A good glass of wine to wind down after a day of hectic and stress or celebrate a great achievment is a special treat. But where is the ideal location to turn a simple fruit like a grape into a glass of joy to celebrate a special occasion.
 
 Making wine is a long, slow process. It can take a full three years to get from the initial planting of a brand-new grapevine through the first harvest, and the first vintage might not be bottled for another two years after that. Longterm investment is required and it is therefore vital to pick the right location to establish a vineyard.
 
@@ -26,15 +26,15 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 5. Wine Australia: https://wineaustralia.com
 
 ## How to use this database
-1. Run WA Winery Data & Locations.ipynb to get all Western Australian Wineries and upload to Postgres
-2. Run Weather.ipynb to get all weather data and upload to Postgres
-3. Run soils.ipynb to get all soil data and upload to Postgres
-4. Run winery_data1.ipynb to get all production and sales data and upload to Postgres
+1. Run WA Winery Data & Locations.ipynb to get all Western Australian Wineries and upload to PostgresSQL
+2. Run Weather.ipynb to get all weather data and upload to PostgresSQL
+3. Run soils.ipynb to get all soil data and upload to PostgresSQL
+4. Run winery_data1.ipynb to get all production and sales data and upload to PostgresSQL
 
 ## Extract
 ### Steps:
 #### Step 1 - Extract WineData.csv
-* Reading in WineData.csv and display data
+* Read in WineData.csv and display data
 
 #### Step 2 - Extract winery latitudes and longitudes utilising Google API
 * Read in Google API and build target url
@@ -49,16 +49,16 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 * Import os to interact with the underlying operating system/ returns the absolute path of the working directory
 
 #### Step 5 - Extract Wine Sales by Geographical Location
-* Reading in GeoWineSales.csv and display
+* Read in GeoWineSales.csv and display
 
 #### Step 6 - Extract Wine Volume by Region
-* Reading in GIVolumeProduction.csv and display
+* Read in GIVolumeProduction.csv and display
 
 #### Step 7 - Extract Wine Sales by Grape Variety
-* Reading in SalesByVariety.csv and display
+* Read in SalesByVariety.csv and display
 
 #### Step 8 - Extract Grape Variety Production
-* Reading in WineProductionSummary.csv and display
+* Read in WineProductionSummary.csv and display
 
 ### Challenges
 * Getting access to API keys
@@ -67,15 +67,15 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 
 
 ## Transform
-In step one the data from WineData.csv was transformed in the step outlines below to allow for quick and easy understanding of the data for further analysis and visualisation as well as being able to extract latitudes and longitudes for each winery by winery name.
+In step one the data from WineData.csv was transformed in the step outlined below to allow for quick and easy understanding of the data for further analysis and visualisation as well as being able to extract latitudes and longitudes for each winery by winery name.
 
 The removing any '&" signs in step two needed to be performed to allow for optimisitaion of extraction of latitudes and longitudes. Looping through each of the wineries automated the process of extracting latitudes and longitudes from the Google API.
 
-In step three the transformation of the soil data...
+In step three the transformation of the soil data was performed to include relevant information.
 
-As outlined in step four the data transformation ...
+As outlined in step four the data transformation to combine serval years of data and weather stations and allow to extract only relevant information.
 
-Step five to eight were applied to allow for quick and easy understanding of the data. To simplify merging these data frames with the rest of the dataframe which will allow for deeper analysis and visualisation.
+Steps five to eight were applied to allow for quick and easy understanding of the data. To simplify merging these data frames with the rest of the dataframe which will allow for deeper analysis and visualisation.
 
 
 ### Steps:
@@ -95,8 +95,10 @@ Step five to eight were applied to allow for quick and easy understanding of the
 * Create a loop with error exception to extract latitude and longitude for each unique winerey
 
 #### Step 3 - Find soil composition data utilising Agric Soil API
-* Created soild dataframe
+* Loading Location csv
+* Created soil dataframe
 * Looped through soil API to retrieve soil data based on latitude and longitude of wineries
+* Renamed column headers for better understanding
 
 #### Step 4 - Transform Weather data
 * Round down those Lat and lng statistic to only 2 digits to look up weather stations from BOM
@@ -140,20 +142,20 @@ Step five to eight were applied to allow for quick and easy understanding of the
 ### Challenges
 * While transforming latitudes and longitudes for WeatherData it was found that index 6 is a winery in New South Wales which needed to removed 
 * Working out how to structure the code to access latitudes and longitudes of the wineries
-* Inconsitency of weather data, not all years have sufficient data
+* Inconsistency of weather data, not all years have sufficient data
 
 
 ## Load
-As the data is very structured and relational PostgresSQL was usedd to load the data into a database. This allows for easy access by multiple users. 
+As the data is very structured and relational PostgresSQL was used to load the data into a database. This allows for easy access by multiple users. 
 
 ### Steps:
 #### Step 1
-* Created schemata with all tables and tables headers in https://quickdatabasediagrams.com
-* Exported schemata to PostgresSQL
+* Created schemas with all tables and tables headers in https://quickdatabasediagrams.com
+* Exported schemas to PostgresSQL
 
 #### Step 2
-* Imported schemata greated in quickdatadiagrams into PostgresSQL
-* Ran the code
+* Imported schemas greated in quickdatadiagrams into PostgresSQL
+* Run the code
 
 #### Step 3
 * In winery_data.ipnyp, Weather.ipnyp, soil.ipnyp, vineyard.ipynb created a connection to local database for each final dataframe
@@ -169,10 +171,10 @@ As the data is very structured and relational PostgresSQL was usedd to load the 
 * Spelling of table headers needed to match
 * Uploading table to PostgresSQL
 
-### Schemata
+### Schemas
 ![ERD_Diagram](ERD%20Diagram.png)
 
 ## Summary
-This data base can be used to compare performance of Western Australian Wine regions over time and find the ideal location. The data can be used for further in depth analysis and visualisation to highlight statistical summaries and pattern recognition. The database is relational because the information is very structured. In addition anyone is able to access the database by using SQL.
+This data base can be used to compare performance of Western Australian Wine regions over time and find the ideal location. The data can be used for further in depth analysis and visualisation to highlight statistical summaries and pattern recognition. The database is relational because the information is very structured. In addition anyone is able to access the database by using PostgresSQL.
 
 
