@@ -56,10 +56,10 @@ CREATE TABLE "Winery_Export_Sales_by_Geolocation" (
      )
 );
 
-CREATE TABLE "Wine_volume_by_region" (
+CREATE TABLE "Wine_Volume_by_region" (
     "Region" varchar    ,
     "Year" int    ,
-    "Volume_(L)" float    ,
+    "Volume_per_Liter" float    ,
     "Average_Sales_Value_per_Liter" float    ,
     CONSTRAINT "pk_Wine_volume_by_region" PRIMARY KEY (
         "Region"
@@ -83,7 +83,7 @@ CREATE TABLE "Wine_Grape_variety_Sales" (
      )
 );
 
-CREATE TABLE "Wine_Grape_varierty_Production" (
+CREATE TABLE "Wine_Grape_variety_Production" (
     "Region" varchar    ,
     "Year" int    ,
     "Wine_Colour" varchar    ,
@@ -93,7 +93,7 @@ CREATE TABLE "Wine_Grape_varierty_Production" (
     "Average_purchase_value_per_tonne" float    ,
     "Winery_grown_fruit_per_tonne" float    ,
     "Winery_grown_share_of_crush" float    ,
-    "Total_crushed_(T)" float    ,
+    "Total_crushed" float    ,
     "Total_value_all_grapes" float    ,
     CONSTRAINT "pk_Wine_Grape_varierty_Production" PRIMARY KEY (
         "Region"
