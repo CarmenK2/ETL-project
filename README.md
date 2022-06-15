@@ -169,7 +169,7 @@ As the data is very structured and relational PostgresSQL was usedd to load the 
 * Spelling of table headers needed to match
 
 ### Schemata
-![ERD_Diagram](ERD%25Diagram.png)
+![ERD_Diagram](ERD%20Diagram.png)
 
 ## Summary
 This data base can be used to compare performance of Western Australian Wine regions over time and find the ideal location. The data can be used for further in depth analysis and visualisation to highlight statistical summaries and pattern recognition. The database is relational because the information is very structured. In addition anyone is able to access the database by using SQL.
