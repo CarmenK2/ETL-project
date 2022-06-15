@@ -16,7 +16,7 @@ The database created will give an insight into what locations are ideal for a pa
 
 
 ## Extract
-Kaggle WineData.csv was choosen as it a comprehensive overview over the Western Australian Wine Region including winery names, price point and tasting scores. Google API's was choosen to match winery names to geographical location. The website of the Department Primary Industries and Regional Development WA was choosen as their soil API provides a comprehensive data set of soil conditions which can be linked to geographical location of the wineries using latitude and longitude of the wineries. The website of the Bureau of Meteorology was choosen for its extensive CSV data on historical weather recordings reaching back to the early 20th century. The Wine Australia website provided detailed CSV data on Western Australian wine region production and sales between 2015 and 2021 and was therefore ideal as data source.
+Kaggle WineData.csv was choosen as it a comprehensive overview over the Western Australian Wine Region including winery names, price point and tasting scores. Google API's was choosen to match winery names to geographical location. The website of the Department Primary Industries and Regional Development WA was choosen as their soil API provides a comprehensive data set of soil conditions which can be linked to geographical location of the wineries using latitude and longitude of the wineries. The website of the Bureau of Meteorology was choosen for its extensive CSV data on historical weather recordings reaching back to the early 20th century. The Wine Australia website provided detailed CSV data on Western Australian wine region production and sales between 2012 and 2021 and was therefore ideal as data source.
 
 ### Data Sources:
 1. https://www.kaggle.com: WineData.csv 
@@ -26,7 +26,7 @@ Kaggle WineData.csv was choosen as it a comprehensive overview over the Western 
 5. Wine Australia: https://wineaustralia.com
 
 ## How to use this database
-1. Run vinyard.ipynb to get all Western Australian Wineries and upload to Postgres
+1. Run WA Winery Data & Locations.ipynb to get all Western Australian Wineries and upload to Postgres
 2. Run Weather.ipynb to get all weather data and upload to Postgres
 3. Run soils.ipynb to get all soil data and upload to Postgres
 4. Run winery_data1.ipynb to get all production and sales data and upload to Postgres
@@ -167,6 +167,7 @@ As the data is very structured and relational PostgresSQL was usedd to load the 
 
 ### Challenges
 * Spelling of table headers needed to match
+* Uploading table to PostgresSQL
 
 ### Schemata
 ![ERD_Diagram](ERD%20Diagram.png)
