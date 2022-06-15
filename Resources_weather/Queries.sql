@@ -14,8 +14,8 @@ CREATE TABLE "Winery_Listing" (
 
 CREATE TABLE "Winery_Location" (
     "Winery_Name" varchar   NOT NULL,
-    "Lat" float   NOT NULL,
-    "Lng" float   NOT NULL,
+    "Latitude" float   NOT NULL,
+    "Longitude" float   NOT NULL,
     "Weather_station_number" int   NOT NULL,
     CONSTRAINT "pk_Winery_Location" PRIMARY KEY (
         "Winery_Name"
@@ -33,10 +33,10 @@ CREATE TABLE "Weather_data" (
 
 CREATE TABLE "Soil_data" (
     "Winery_Name" varchar   NOT NULL,
-    "Lat" float   NOT NULL,
-    "Lng" float   NOT NULL,
+    "Latitude" float   NOT NULL,
+    "Longitude" float   NOT NULL,
     "SubSoil_Condition" varchar   NOT NULL,
-    "Soil_type" varchar   NOT NULL,
+    "Soil_Type" varchar   NOT NULL,
     CONSTRAINT "pk_Soil_data" PRIMARY KEY (
         "Winery_Name"
      )
